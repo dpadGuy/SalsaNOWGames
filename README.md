@@ -1,1 +1,1 @@
-**https://github.com/SteamRE/DepotDownloader**
+**Credits: https://github.com/SteamRE/DepotDownloader**
