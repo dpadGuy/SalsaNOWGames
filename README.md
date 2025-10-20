@@ -1,1 +1,1 @@
-The program being used: **https://github.com/SteamRE/DepotDownloader**
+**https://github.com/SteamRE/DepotDownloader**
