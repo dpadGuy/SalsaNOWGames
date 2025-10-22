@@ -62,12 +62,12 @@ namespace SalsaNOWGames
 
             if (username == "" || password == "")
             {
-                Console.Write("Enter your name: ");
+                Console.Write("Enter your steam username: ");
                 username = Console.ReadLine();
 
                 Console.WriteLine("WARNING: PASSWORD WILL BE VISIBLE !!!");
                 Thread.Sleep(2000);
-                Console.Write("Enter your password: ");
+                Console.Write("Enter your steam password: ");
                 password = Console.ReadLine();
             }
 
@@ -75,6 +75,9 @@ namespace SalsaNOWGames
             string appID = Console.ReadLine();
 
             Directory.CreateDirectory($"{gamesDirectory}\\{appID}");
+
+            // We make steam_appid.txt in order to tell the game which App ID it belongs to.
+            File.WriteAllText($"{gamesDirectory}\\{appID}\\steam_appid.txt", $"{appID}");
 
             ProcessStartInfo psi = new ProcessStartInfo
             {
