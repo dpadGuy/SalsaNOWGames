@@ -82,7 +82,7 @@ namespace SalsaNOWGames
             ProcessStartInfo psi = new ProcessStartInfo
             {
                 FileName = @"I:\Apps\SalsaNOW\DepotDownloader\DepotDownloader.exe",
-                Arguments = $"-app {appID} -username {username} -password {password} -os windows -no-mobile -dir {gamesDirectory}\\{appID}",
+                Arguments = $"-app \"{appID}\" -username \"{username}\" -password \"{password}\" -os windows -no-mobile -dir \"{gamesDirectory}\\{appID}\"",
             };
 
             Console.Title = $"SalsaNOW Games - Steam \"{gamesDirectory}\\{appID}\"";
@@ -93,7 +93,7 @@ namespace SalsaNOWGames
 
             Process.Start("I:\\Apps\\SalsaNOW\\Explorer++.exe", $"{gamesDirectory}\\{appID}");
 
-            GameSelection();
+            await GameSelection();
             return;
         }
     }
